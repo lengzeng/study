@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+	int a;
+	int i,j,k;
+	scanf("%d",&a);
+	int ret=0;
+	for(i=a,i<a+4;i++){
+		for(j=a,j<a+4;j++){
+			for(k=a,k<a+4;k++){
+				if(i!=j&&j!=k&&k!=i){
+					ret++;
+					printf("%d%d%d",i,j,k);
+					if(ret=6){
+						printf("\n");
+						ret=0;
+					}else printf(" ");
+				}
+			}
+		}
+	}
+	return 0;
+}
